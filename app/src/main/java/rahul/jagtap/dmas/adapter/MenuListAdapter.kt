@@ -1,3 +1,35 @@
+package rahul.jagtap.dmas.adapter
+
+import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import rahul.jagtap.dmas.*
+import rahul.jagtap.dmas.admin.*
+import rahul.jagtap.dmas.admin.bills.BillDatesActivity
+import rahul.jagtap.dmas.admin.reports.ReportTypesActivity
+import rahul.jagtap.dmas.databinding.ItemHomeBannerBinding
+import rahul.jagtap.dmas.databinding.ItemHomeMenuBinding
+import rahul.jagtap.dmas.model.User
+import rahul.jagtap.dmas.user.*
+
+class MenuListAdapter(var context: Context?, var itemList: List<String?>? = null) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+    private var loggedInUser: User? = null
+    var isAdmin = false
+    var isEmployee = false
+
+    init {
+        val app = context?.applicationContext as App
+        loggedInUser = app.preferences?.loggedInUser
+        isAdmin = app.preferences?.loggedInUser?.isAdmin == "1"
+        isEmployee = app.preferences?.loggedInUser?.userType == "2"
+    }
+
+    companion object {
+        private const val TYPE_BANNER = 0
+        private const val TYPE_TILE = 1
         private val BANNER_TITLES = setOf("My Accountant")
     }
 
@@ -50,6 +82,7 @@
             "येथून फी भरावी" -> holder.binding.ivMenu.setImageResource(R.drawable.ic_make_payment)
             "हे अँप कसे वापरावे" -> holder.binding.ivMenu.setImageResource(R.drawable.ic_tutorial)
             "Text Msg" -> holder.binding.ivMenu.setImageResource(R.drawable.ic_view_reports)
+            "नवनवीन माहिती" -> holder.binding.ivMenu.setImageResource(R.drawable.ic_govt_scheme_white)
             "नियम व अटी" -> holder.binding.ivMenu.setImageResource(R.drawable.ic_terms_conditions)
             "contact us" -> holder.binding.ivMenu.setImageResource(R.drawable.ic_headset)
             "ट्रेनिंग व्हिडिओ" -> holder.binding.ivMenu.setImageResource(R.drawable.ic_training_video)
