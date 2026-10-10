@@ -54,7 +54,7 @@ class LoginActivity : BaseActivity() {
         setContentView(binding.root)
 
         if (app?.preferences?.isLoggedInUser == true) {
-            startActivity(Intent(mContext, if (app?.preferences?.loggedInUser?.isAdmin == "1") MainActivity::class.java else ESuvidhaServicesTableActivity::class.java).putExtra("fromLogin", true))
+            startActivity(Intent(mContext, MainActivity::class.java).putExtra("fromLogin", true))
             finish()
             return
         }
@@ -310,7 +310,7 @@ class LoginActivity : BaseActivity() {
                             app?.preferences?.loggedInUserId = uid
                             app?.preferences?.loggedInUserEmail = email
                             longToast("Login Successfully")
-                            startActivity(Intent(mContext, ESuvidhaServicesTableActivity::class.java).putExtra("fromLogin", true))
+                            startActivity(Intent(mContext, MainActivity::class.java).putExtra("fromLogin", true))
                             finish()
                         }
                     }
