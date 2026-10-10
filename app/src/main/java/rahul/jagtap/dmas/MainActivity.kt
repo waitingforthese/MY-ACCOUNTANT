@@ -45,7 +45,6 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import id.zelory.compressor.Compressor
 import kotlinx.coroutines.launch
-import okhttp3.ResponseBody
 import pl.aprilapps.easyphotopicker.ChooserType
 import pl.aprilapps.easyphotopicker.DefaultCallback
 import pl.aprilapps.easyphotopicker.EasyImage
@@ -65,9 +64,6 @@ import rahul.jagtap.dmas.model.User
 import rahul.jagtap.dmas.utils.GridDividerDecoration
 import rahul.jagtap.dmas.utils.HomeGridDividerDecoration
 import rahul.jagtap.dmas.utils.Utils
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
 import java.lang.reflect.Type
 import java.text.SimpleDateFormat
 import java.util.Date
@@ -450,6 +446,19 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.rvMenu.adapter = menuListAdapter
         if (app?.preferences?.loggedInUser?.isAdmin != "1" || app?.preferences?.loggedInUser?.isAdmin != "2") setDayBookData()
     }
+
+    private fun setDayBookData() {
+        // setMenuGrid() can run twice (cache render + network refresh); attach this persistent listener once.
+        if (dayBookListenerAttached) return
+        dayBookListenerAttached = true
+        app?.preferences?.loggedInUser?.uid?.let {
+            Firebase.database.getReference(Utils.DAY_BOOK_TABLE).child(it).addValueEventListener(object : ValueEventListener {
+                override fun onDataChange(dataSnapshot: DataSnapshot) {
+                    dayBook = dataSnapshot.getValue(DayBook::class.java) //                    if (dayBook != null) {
+                    //                        menuList.add("Day Book")
+                    //                        menuListAdapter = MenuListAdapter(mContext, menuList)
+                    //                        rvMenu.adapter = menuListAdapter
+                    //                    }
                 }
 
                 override fun onCancelled(dataSnapshot: DatabaseError) {
@@ -457,22 +466,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             })
         }
     }
-
-    /** Fire-and-forget refresh of the e-suvidha cache blobs so the next open reflects any server change. */
-
-
-            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {}
-        })
-        app?.apiRequestHelper?.apiService?.suchna?.enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                if (response.isSuccessful) EsuvidhaCache.saveSuchnaJson(prefs, response.body()?.string())
-            }
-
-            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {}
-        })
-    }
-
-   
 
     override fun onNavigationItemSelected(
         item: MenuItem
