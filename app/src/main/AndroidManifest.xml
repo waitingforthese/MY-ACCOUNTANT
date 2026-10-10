@@ -604,32 +604,12 @@
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
-            android:name="rahul.jagtap.dmas.user.GovtSchemesActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.GovtSchemeListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
             android:name="rahul.jagtap.dmas.admin.TextMsgActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name="rahul.jagtap.dmas.admin.AddTextMsgActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.GovtSchemesInfoActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.AddGovtSchemeInfoActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
