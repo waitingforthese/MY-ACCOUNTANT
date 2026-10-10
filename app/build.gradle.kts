@@ -22,7 +22,7 @@ android {
 //        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         buildFeatures.buildConfig = true
-        buildConfigField("String", "BASE_URL", "\"https://maha-e-suvidha-default-rtdb.firebaseio.com/\"")
+        buildConfigField("String", "BASE_URL", "\"https://my-accountant-e5b00-default-rtdb.firebaseio.com/\"")
         buildConfigField("String", "OAUTH_CLIENT_ID", "\"635481756457-ps3hut2sv40acosmnujskak5nh16r9g6.apps.googleusercontent.com\"")
     }
 
