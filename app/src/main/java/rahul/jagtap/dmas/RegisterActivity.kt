@@ -177,7 +177,7 @@ class RegisterActivity : BaseActivity() {
         longToast("Account created successfully")
         app?.preferences?.loggedInUserId = uid
         app?.preferences?.loggedInUserEmail = strEmail
-        startActivity(Intent(mContext, ESuvidhaServicesTableActivity::class.java).putExtra("fromLogin", true))
+        startActivity(Intent(mContext, MainActivity::class.java))
         finish()
     }
 
