@@ -16,8 +16,8 @@ android {
         applicationId = "rahul.jagtap.myaccountant"
         minSdk = 23
         targetSdk = 35
-        versionCode = 34
-        versionName = "3.1.3"
+        versionCode = 1
+        versionName = "1.0"
         multiDexEnabled = true
 //        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
