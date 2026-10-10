@@ -471,10 +471,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         }
     }
 
-    /**
-  
-       
-
     /** Fire-and-forget refresh of the e-suvidha cache blobs so the next open reflects any server change. */
     private fun refreshEsuvidhaCacheSilently() {
         val prefs = app?.preferences ?: return
