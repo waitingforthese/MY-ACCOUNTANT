@@ -23,7 +23,7 @@ android {
         vectorDrawables.useSupportLibrary = true
         buildFeatures.buildConfig = true
         buildConfigField("String", "BASE_URL", "\"https://maha-e-suvidha-default-rtdb.firebaseio.com/\"")
-        buildConfigField("String", "OAUTH_CLIENT_ID", "\"408121252150-7fj5uevmmt55pafg1hfeb4gevhh5sj9v.apps.googleusercontent.com\"")
+        buildConfigField("String", "OAUTH_CLIENT_ID", "\"635481756457-ps3hut2sv40acosmnujskak5nh16r9g6.apps.googleusercontent.com\"")
     }
 
     buildFeatures {
