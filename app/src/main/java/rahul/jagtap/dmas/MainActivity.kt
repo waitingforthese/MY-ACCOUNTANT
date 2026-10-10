@@ -450,19 +450,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         binding.rvMenu.adapter = menuListAdapter
         if (app?.preferences?.loggedInUser?.isAdmin != "1" || app?.preferences?.loggedInUser?.isAdmin != "2") setDayBookData()
     }
-
-    private fun setDayBookData() {
-        // setMenuGrid() can run twice (cache render + network refresh); attach this persistent listener once.
-        if (dayBookListenerAttached) return
-        dayBookListenerAttached = true
-        app?.preferences?.loggedInUser?.uid?.let {
-            Firebase.database.getReference(Utils.DAY_BOOK_TABLE).child(it).addValueEventListener(object : ValueEventListener {
-                override fun onDataChange(dataSnapshot: DataSnapshot) {
-                    dayBook = dataSnapshot.getValue(DayBook::class.java) //                    if (dayBook != null) {
-                    //                        menuList.add("Day Book")
-                    //                        menuListAdapter = MenuListAdapter(mContext, menuList)
-                    //                        rvMenu.adapter = menuListAdapter
-                    //                    }
                 }
 
                 override fun onCancelled(dataSnapshot: DatabaseError) {
