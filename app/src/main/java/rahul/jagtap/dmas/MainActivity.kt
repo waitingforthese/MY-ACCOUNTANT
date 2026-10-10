@@ -1008,7 +1008,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     //
     //        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
     //        signIn()
-    //    val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder().setFilterByAuthorizedAccounts(false).setServerClientId("408121252150-7fj5uevmmt55pafg1hfeb4gevhh5sj9v.apps.googleusercontent.com").setAutoSelectEnabled(true) //            .setNonce(<nonce string to use when generating a Google ID token>)
+    //    val googleIdOption: GetGoogleIdOption = GetGoogleIdOption.Builder().setFilterByAuthorizedAccounts(false).setServerClientId("635481756457-ps3hut2sv40acosmnujskak5nh16r9g6.apps.googleusercontent.com").setAutoSelectEnabled(true) //            .setNonce(<nonce string to use when generating a Google ID token>)
     //        .build()
     //
     //    val request: GetCredentialRequest = GetCredentialRequest.Builder().addCredentialOption(googleIdOption).build() //
