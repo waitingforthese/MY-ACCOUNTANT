@@ -62,8 +62,6 @@ import rahul.jagtap.dmas.model.ContactConfig
 import rahul.jagtap.dmas.model.DayBook
 import rahul.jagtap.dmas.model.ImageDetails
 import rahul.jagtap.dmas.model.User
-import rahul.jagtap.dmas.user.JyotishShastraActivity
-import rahul.jagtap.dmas.utils.EsuvidhaCache
 import rahul.jagtap.dmas.utils.GridDividerDecoration
 import rahul.jagtap.dmas.utils.HomeGridDividerDecoration
 import rahul.jagtap.dmas.utils.Utils
@@ -474,65 +472,8 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     /**
-     * Opens the Jyotish Shastra form (moved here from the "इतर" grid). The form needs the dynamic
-     * service types + suchna text to render its fields, so we fetch them first — mirroring
-     * ESuvidhaMenuActivity — then launch. Failures are non-fatal: we launch with whatever we have.
-     */
-    fun openJyotishShastra() {
-        // Warm cache (kept fresh by the e-suvidha screens) -> launch instantly, no dialog. Refresh in bg.
-        val cachedTypes = EsuvidhaCache.getDynamicTypes(app?.preferences)
-        if (cachedTypes != null) {
-            val suchna = EsuvidhaCache.getSuchna(app?.preferences)?.get(Utils.JYOTISH_SHASTRA_SUCHNA) ?: ""
-            launchJyotishShastra(null, cachedTypes, suchna)
-            refreshEsuvidhaCacheSilently()
-            return
-        }
-        // Cold cache: fall back to the fetch-then-launch flow with a progress dialog.
-        val cpd: ProgressDialog? = ProgressDialog(mContext)
-        cpd?.setMessage("Please wait..")
-        cpd?.setCancelable(false)
-        cpd?.show()
-        app?.apiRequestHelper?.apiService?.esuvidhaDynamicTypes?.enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                var typesMap: HashMap<String, HashMap<String, HashMap<String, String>>>? = null
-                if (response.isSuccessful) {
-                    val json = response.body()?.string()
-                    if (!json.isNullOrEmpty() && json != "null") {
-                        val type: Type = object : TypeToken<HashMap<String, HashMap<String, HashMap<String, String>>>?>() {}.type
-                        typesMap = Gson().fromJson(json, type)
-                        EsuvidhaCache.saveDynamicTypesJson(app?.preferences, json)
-                    }
-                }
-                fetchJyotishSuchnaAndLaunch(cpd, typesMap)
-            }
-
-            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                fetchJyotishSuchnaAndLaunch(cpd, null)
-            }
-        })
-    }
-
-    private fun fetchJyotishSuchnaAndLaunch(cpd: ProgressDialog?, typesMap: HashMap<String, HashMap<String, HashMap<String, String>>>?) {
-        app?.apiRequestHelper?.apiService?.suchna?.enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                var suchna = ""
-                if (response.isSuccessful) {
-                    val json = response.body()?.string()
-                    if (!json.isNullOrEmpty() && json != "null") {
-                        val type: Type = object : TypeToken<HashMap<String, String>?>() {}.type
-                        val map: HashMap<String, String>? = Gson().fromJson(json, type)
-                        suchna = map?.get(Utils.JYOTISH_SHASTRA_SUCHNA) ?: ""
-                        EsuvidhaCache.saveSuchnaJson(app?.preferences, json)
-                    }
-                }
-                launchJyotishShastra(cpd, typesMap, suchna)
-            }
-
-            override fun onFailure(call: Call<ResponseBody>, t: Throwable) {
-                launchJyotishShastra(cpd, typesMap, "")
-            }
-        })
-    }
+  
+       
 
     /** Fire-and-forget refresh of the e-suvidha cache blobs so the next open reflects any server change. */
     private fun refreshEsuvidhaCacheSilently() {
@@ -553,15 +494,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         })
     }
 
-    private fun launchJyotishShastra(cpd: ProgressDialog?, typesMap: HashMap<String, HashMap<String, HashMap<String, String>>>?, suchna: String) {
-        if (cpd?.isShowing == true) cpd.dismiss()
-        if (checkIfActivityDestroying()) return
-        val bundle = Bundle()
-        bundle.putSerializable("hashMap", typesMap?.get("jyotish_shastra"))
-        startActivity(Intent(mContext, JyotishShastraActivity::class.java)
-            .putExtra("suchna", suchna)
-            .putExtras(bundle))
-    }
+   
 
     override fun onNavigationItemSelected(
         item: MenuItem
