@@ -459,12 +459,7 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
     }
 
     /** Fire-and-forget refresh of the e-suvidha cache blobs so the next open reflects any server change. */
-    private fun refreshEsuvidhaCacheSilently() {
-        val prefs = app?.preferences ?: return
-        app?.apiRequestHelper?.apiService?.esuvidhaDynamicTypes?.enqueue(object : Callback<ResponseBody> {
-            override fun onResponse(call: Call<ResponseBody>, response: Response<ResponseBody>) {
-                if (response.isSuccessful) EsuvidhaCache.saveDynamicTypesJson(prefs, response.body()?.string())
-            }
+
 
             override fun onFailure(call: Call<ResponseBody>, t: Throwable) {}
         })
