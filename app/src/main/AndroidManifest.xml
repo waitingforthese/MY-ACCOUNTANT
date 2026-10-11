@@ -108,6 +108,7 @@
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
+
         <activity
             android:name="rahul.jagtap.dmas.admin.bills.BillDatesActivity"
             android:label="@string/app_name"
@@ -123,76 +124,7 @@
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.PanCardActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ShopActActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.FoodLicenseActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.UdyamAadharActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ManualAadharPanActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.NepalMoneyTransferActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.RailwayTicketBookingActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.PanCardListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.FoodLicenseListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.UdyamAadharListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.ShopActListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.ManualAadharPanListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.NepalMoneyTransferListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.RailwayTicketBookingListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
         <activity
             android:name="rahul.jagtap.dmas.admin.SendReportActivity"
             android:label="@string/app_name"
@@ -263,16 +195,7 @@
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.ProvidentFundListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ProvidentFundActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
         <activity
             android:name="rahul.jagtap.dmas.PaymentDetailsActivity"
             android:label="@string/app_name"
@@ -318,46 +241,7 @@
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.BusinessPanCardActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ElectionCardActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.CibilReportActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.DrivingLearningLicenseActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.PoliceVerificationActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.GstRegistrationActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.AadharCardUpdateActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.PassportActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        
         <activity
             android:name="rahul.jagtap.dmas.AccountingMenuActivity"
             android:label="@string/app_name"
@@ -368,16 +252,7 @@
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.BusinessPanCardListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.ElectionCardListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
         <activity
             android:name="rahul.jagtap.dmas.TutorialActivity"
             android:label="@string/app_name"
@@ -388,161 +263,13 @@
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.PassportListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.DrivingLearningLicenseListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.EditPanOrAadharCardActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.EditPanOrAadharCardListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.PoliceVerificationListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.IncomeCertificateListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.AgeCertificateListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.IncomeCertificateActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.AgeCertificateActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.AadharPanLinkActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.GazzetActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.GazzetListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ProjectFundingActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.CibilReportListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        
         <activity
             android:name="rahul.jagtap.dmas.EditUserActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.CreditCardActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.CreditCardListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.DownloadHistoryActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.GstRegistrationListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.AllGovtCardsActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.AllGovtCardListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.VerificationActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.VerificationListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.FarmerPolicyActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.FarmerPolicyListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.AllOtherDocsActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.AllOtherCardListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ShriGondaSetuKendraActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.DematAccountActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.DematAccountListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.ReferralProgramActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
+
         <activity
             android:name="rahul.jagtap.dmas.admin.TextMsgActivity"
             android:label="@string/app_name"
@@ -554,9 +281,20 @@
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
+            android:name="rahul.jagtap.dmas.GovtSchemesInfoActivity"
+            android:label="@string/app_name"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+        <activity
+            android:name="rahul.jagtap.dmas.AddGovtSchemeInfoActivity"
+            android:label="@string/app_name"
+            android:theme="@style/NoActionBarTheme"
+            android:windowSoftInputMode="adjustPan|stateHidden"/>
+       <activity
             android:name="rahul.jagtap.dmas.TermsConditionsActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
+
 
         <!-- Sample AdMob app ID: ca-app-pub-3940256099942544~3347511713 -->
         <meta-data
