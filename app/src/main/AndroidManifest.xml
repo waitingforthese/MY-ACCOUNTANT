@@ -109,26 +109,6 @@
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
-            android:name="rahul.jagtap.dmas.user.OnlineESuvidhaOptionsActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ESuvidhaServicesGridActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.EsuvidhaGridAdminActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.EditEsuvidhaTileActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
             android:name="rahul.jagtap.dmas.admin.bills.BillDatesActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
@@ -175,21 +155,6 @@
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name="rahul.jagtap.dmas.user.RailwayTicketBookingActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.ESuvidhaDatesActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.ESuvidhaUsersActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.ESuvidhaTypesActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
@@ -394,22 +359,12 @@
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
-            android:name="rahul.jagtap.dmas.user.JanmaKundliActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
             android:name="rahul.jagtap.dmas.AccountingMenuActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
             android:name="rahul.jagtap.dmas.user.ReportOptionsActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.ESuvidhaMenuActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
@@ -584,21 +539,6 @@
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.newimpl.ESuvidhaListActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.newimpl.ESuvidhaDatesV2Activity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.esuvidha.newimpl.ESuvidhaUsersV2Activity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
             android:name="rahul.jagtap.dmas.ReferralProgramActivity"
             android:label="@string/app_name"
             android:theme="@style/NoActionBarTheme"
@@ -614,36 +554,7 @@
             android:theme="@style/NoActionBarTheme"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
         <activity
-            android:name="rahul.jagtap.dmas.EditSuchnaActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustResize"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.ESuvidhaSuchnaOptionsActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ViewSuchnaActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.ESuvidhaOptionsDynamicTypesActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.admin.EditESuvidhaDynamicTypesActivity"
-            android:label="@string/app_name"
-            android:theme="@style/NoActionBarTheme"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
             android:name="rahul.jagtap.dmas.TermsConditionsActivity"
-            android:label="@string/app_name"
-            android:windowSoftInputMode="adjustPan|stateHidden"/>
-        <activity
-            android:name="rahul.jagtap.dmas.user.ESuvidhaServicesTableActivity"
             android:label="@string/app_name"
             android:windowSoftInputMode="adjustPan|stateHidden"/>
 
