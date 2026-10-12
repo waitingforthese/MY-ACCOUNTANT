@@ -310,10 +310,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 val menu: Menu = binding.navView.menu
                 val nav_banner_image = menu.findItem(R.id.nav_banner_image)
                 nav_banner_image?.isVisible = true
-                val nav_esuvidha_image = menu.findItem(R.id.nav_esuvidha_image)
-                nav_esuvidha_image?.isVisible = true
-                val nav_esuvidha_list_image = menu.findItem(R.id.nav_esuvidha_list_image)
-                nav_esuvidha_list_image?.isVisible = true
                 val nav_taluka_suvidha_list_image = menu.findItem(R.id.nav_taluka_suvidha_list_image)
                 nav_taluka_suvidha_list_image?.isVisible = true
                 val nav_accounting_menu_image = menu.findItem(R.id.nav_accounting_menu_image)
@@ -493,14 +489,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
             imageType = 1
             choosePhotoWithPermissions()
         }
-        if (id == R.id.nav_esuvidha_image) {
-            imageType = 2
-            choosePhotoWithPermissions()
-        }
-        if (id == R.id.nav_esuvidha_list_image) {
-            imageType = 3
-            choosePhotoWithPermissions()
-        }
         if (id == R.id.nav_taluka_suvidha_list_image) {
             imageType = 4
             choosePhotoWithPermissions()
@@ -600,8 +588,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                                 dialog.dismiss()
                                 when (imageType) {
                                     1 -> uploadBannerPhoto(imageUri!!)
-                                    2 -> uploadESuvidhaPhoto(imageUri!!)
-                                    3 -> uploadESuvidhaListPhoto(imageUri!!)
                                     4 -> uploadTalukaSuvidhaListPhoto(imageUri!!)
                                     5 -> uploadAccountingMenuPhoto(imageUri!!)
                                     6 -> uploadRegisterScreenPhoto(imageUri!!)
@@ -656,60 +642,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         cpd?.show()
         imageFileName = "banner_${SimpleDateFormat("yyyyMMdd_HHmmss", Locale.ENGLISH).format(Date())}.jpg"
         val filepath = storageRef.child(Utils.BANNER_IMAGE_TABLE).child(imageFileName)
-        filepath.putFile(fileUri).addOnSuccessListener {
-            try {
-                if (cpd != null && cpd.isShowing) cpd.dismiss()
-                filepath.downloadUrl.addOnSuccessListener { uri: Uri ->
-                    imageDownloadUrl = uri.toString()
-                    createDbRecord()
-                }.addOnFailureListener {
-                    it.printStackTrace()
-                }
-            } catch (e: java.lang.Exception) {
-                e.printStackTrace()
-            }
-        }.addOnFailureListener {
-            if (cpd?.isShowing == true) cpd.dismiss()
-            it.message?.let { it1 -> toast(it1) }
-        }.addOnProgressListener { //displaying the upload progress
-            val progress: Double = 100.0 * it.bytesTransferred / it.totalByteCount
-            cpd?.setMessage("Please wait.. ")
-        }
-    }
-
-    private fun uploadESuvidhaPhoto(fileUri: Uri) {
-        val cpd: ProgressDialog? = ProgressDialog(mContext)
-        cpd?.setCancelable(false)
-        cpd?.show()
-        imageFileName = "esuvidha_${SimpleDateFormat("yyyyMMdd_HHmmss", Locale.ENGLISH).format(Date())}.jpg"
-        val filepath = storageRef.child(Utils.ESUVIDHA_IMAGE_TABLE).child(imageFileName)
-        filepath.putFile(fileUri).addOnSuccessListener {
-            try {
-                if (cpd != null && cpd.isShowing) cpd.dismiss()
-                filepath.downloadUrl.addOnSuccessListener { uri: Uri ->
-                    imageDownloadUrl = uri.toString()
-                    createDbRecord()
-                }.addOnFailureListener {
-                    it.printStackTrace()
-                }
-            } catch (e: java.lang.Exception) {
-                e.printStackTrace()
-            }
-        }.addOnFailureListener {
-            if (cpd?.isShowing == true) cpd.dismiss()
-            it.message?.let { it1 -> toast(it1) }
-        }.addOnProgressListener { //displaying the upload progress
-            val progress: Double = 100.0 * it.bytesTransferred / it.totalByteCount
-            cpd?.setMessage("Please wait.. ")
-        }
-    }
-
-    private fun uploadESuvidhaListPhoto(fileUri: Uri) {
-        val cpd: ProgressDialog? = ProgressDialog(mContext)
-        cpd?.setCancelable(false)
-        cpd?.show()
-        imageFileName = "esuvidha_list_${SimpleDateFormat("yyyyMMdd_HHmmss", Locale.ENGLISH).format(Date())}.jpg"
-        val filepath = storageRef.child(Utils.ESUVIDHA_LIST_IMAGE_TABLE).child(imageFileName)
         filepath.putFile(fileUri).addOnSuccessListener {
             try {
                 if (cpd != null && cpd.isShowing) cpd.dismiss()
@@ -824,8 +756,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
         val messageUserMap = HashMap<String, Any?>()
         when (imageType) {
             1 -> messageUserMap["${Utils.BANNER_IMAGE_TABLE}"] = billMap
-            2 -> messageUserMap["${Utils.ESUVIDHA_IMAGE_TABLE}"] = billMap
-            3 -> messageUserMap["${Utils.ESUVIDHA_LIST_IMAGE_TABLE}"] = billMap
             4 -> messageUserMap["${Utils.TALUKA_SUVIDHA_LIST_IMAGE_TABLE}"] = billMap
             5 -> messageUserMap["${Utils.ACCOUNTING_MENU_IMAGE_TABLE}"] = billMap
             6 -> messageUserMap["${Utils.REGISTER_SCREEN_IMAGE_TABLE}"] = billMap
@@ -841,8 +771,6 @@ class MainActivity : BaseActivity(), NavigationView.OnNavigationItemSelectedList
                 setBannerImage()
             }
 
-            2 -> toast("Updated E-Suvidha image")
-            3 -> toast("Updated E-Suvidha List image")
             4 -> toast("Updated Taluka Suvidha List image")
             5 -> toast("Updated Accounting Menu Image")
             6 -> toast("Updated Register Image")
