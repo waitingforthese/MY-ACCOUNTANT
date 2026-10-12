@@ -148,22 +148,9 @@ class PaymentDetailsActivity : BaseActivity() {
             } catch (e: java.lang.Exception) {
                 e.printStackTrace()
             }
-        }.addOnFailureListener { exception ->
+        }.addOnFailureListener {
             if (cpd?.isShowing == true) cpd.dismiss()
-
-            val storageException =
-                exception as? com.google.firebase.storage.StorageException
-
-            Log.e(
-                "PaymentPhotoUpload",
-                "Upload failed: code=${storageException?.errorCode}, " +
-                    "message=${exception.message}",
-                exception
-            )
-
-            toast(
-                "Upload failed: ${storageException?.errorCode ?: exception.message}"
-            )
+            it.message?.let { it1 -> toast(it1) }
         }.addOnProgressListener { //displaying the upload progress
             val progress: Double = 100.0 * it.bytesTransferred / it.totalByteCount
             cpd?.setMessage("Please wait.. ")
