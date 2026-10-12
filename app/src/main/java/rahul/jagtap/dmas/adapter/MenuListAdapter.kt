@@ -129,6 +129,9 @@ class MenuListAdapter(var context: Context?, var itemList: List<String?>? = null
             "Text Msg" -> {
                 context?.startActivity(Intent(context, TextMsgActivity::class.java))
             }
+            "नवनवीन माहिती" -> {
+                context?.startActivity(Intent(context, GovtSchemesInfoActivity::class.java))
+            }
             "All Users" -> {
                 context?.startActivity(Intent(context, UsersActivity::class.java))
             }
