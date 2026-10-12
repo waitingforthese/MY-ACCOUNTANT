@@ -32,19 +32,11 @@
         <item
             android:id="@+id/nav_banner_image"
             android:visible="false"
-            android:title="Add/Update Banner Image" />
-        <item
-            android:id="@+id/nav_esuvidha_image"
-            android:visible="false"
-            android:title="Add/Update E-Suvidha Image" />
-        <item
-            android:id="@+id/nav_esuvidha_list_image"
-            android:visible="false"
-            android:title="Add/Update ई सुविधा लिस्ट मध्ये फोटो" />
+            android:title="Add/Update Home Banner" />
         <item
             android:id="@+id/nav_taluka_suvidha_list_image"
             android:visible="false"
-            android:title="Add/Update तालुका नुसार सुविधा मध्ये फोटो" />
+            android:title="Add/Update हे अँप कसे वापरावे " />
         <item
             android:id="@+id/nav_accounting_menu_image"
             android:visible="false"
