@@ -44,8 +44,6 @@ class Utils {
         var PAYMENT_DETAILS_TABLE = "payment_details"
         var REFERRAL_PROGRAM_TABLE = "referral_program"
         var BANNER_IMAGE_TABLE = "banner_image"
-        var ESUVIDHA_IMAGE_TABLE = "esuvidha_image"
-        var ESUVIDHA_LIST_IMAGE_TABLE = "esuvidha_list_image"
         var TALUKA_SUVIDHA_LIST_IMAGE_TABLE = "taluka_suvidha_list_image"
         var ABOUT_TEAM_IMAGE_TABLE = "about_team_image"
         var ACCOUNTING_MENU_IMAGE_TABLE = "accounting_menu_image"
